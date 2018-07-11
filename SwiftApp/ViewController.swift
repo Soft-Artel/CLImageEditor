@@ -7,18 +7,21 @@
 //
 
 import UIKit
-import CLImageEditorforSwift
+import CLImageEditorForSwift
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        
-        
-        // Do any additional setup after loading the view, typically from a nib.
+       
     }
 
+    @IBAction func openEditor(_ sender: Any) {
+        let r = UIImage(named: "777")
+        let tt = CLImageEditor(image: r)
+        self.present(tt!, animated: true, completion: nil)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
